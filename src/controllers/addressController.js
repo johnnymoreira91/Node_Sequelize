@@ -1,4 +1,4 @@
-const Addresses = require('../database/models/Adresses');
+const Address = require('../database/models/Adresses');
 const User = require('../database/models/User');
 
 module.exports = {
@@ -6,10 +6,18 @@ module.exports = {
     const { user_id } = req.params;
     const user = await User.findByPk(user_id, {
       include: { association: 'addresses' }
-    });
-
+    })
+    if (!user) {
+      return res.status(400).json({ error: 'User Not Found!' })
+    }
     return res.status(200).json(user)
+  },
 
+  async allAddress(req,res) {
+    const user = await User.findAll({
+      include: { association: 'addresses' }
+    })
+    res.status(200).json(user)
   },
 
   async store(req,res) {
@@ -22,10 +30,7 @@ module.exports = {
     if (!user) {
       return res.status(400).json({ error: 'User Not Found!' })
     }
-
-    return res.status(200).json(user)
-
-    const address = await Addresses.create({
+    const address = await Address.create({
       zipcode,
       street,
       number,
