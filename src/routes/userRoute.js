@@ -33,6 +33,7 @@ router.post('/:user_id/addresses', addressController.store);
 router.get('/:user_id/insurance', insuranceController.index);
 router.post('/:user_id/insurance', insuranceController.store);
 router.delete('/:user_id/insurance', insuranceController.delete);
+router.delete('/:user_id', userController.delete);
 // report user
 router.get('/report', reportController.show);
 
