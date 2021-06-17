@@ -23,7 +23,11 @@ module.exports = {
             through: {
               attributes:[]
             }
-          }
+          },
+          { 
+            association: 'histories',
+            attributes: ['history']
+          },
         ]
       })
 

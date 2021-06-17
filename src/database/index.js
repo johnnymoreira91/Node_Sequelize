@@ -4,6 +4,7 @@ const dbConfig = require('../config/database');
 const User = require('./models/User');
 const Addresses = require('./models/Adresses');
 const Insurance = require('./models/Insurance');
+const Histories = require('./models/Histories');
 
 const connection = new Sequelize(dbConfig);
 
@@ -20,9 +21,11 @@ connection.authenticate().then(
 User.init(connection);
 Addresses.init(connection);
 Insurance.init(connection);
+Histories.init(connection);
 
 User.associate(connection.models);
 Addresses.associate(connection.models);
 Insurance.associate(connection.models);
+Histories.associate(connection.models);
 
 module.exports = connection

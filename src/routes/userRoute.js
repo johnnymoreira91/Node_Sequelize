@@ -23,6 +23,7 @@ const userController = require('../controllers/userController');
 const addressController = require('../controllers/addressController');
 const insuranceController = require('../controllers/insuranceController');
 const reportController = require('../controllers/reportController');
+const historiesController = require('../controllers/historiesController');
 
 // user routes
 router.get('/', userController.index);
@@ -34,6 +35,8 @@ router.get('/:user_id/insurance', insuranceController.index);
 router.post('/:user_id/insurance', insuranceController.store);
 router.delete('/:user_id/insurance', insuranceController.delete);
 router.delete('/:user_id', userController.delete);
+router.get('/:user_id/histories', historiesController.index);
+router.post('/:user_id/histories', historiesController.store);
 // report user
 router.get('/report', reportController.show);
 
