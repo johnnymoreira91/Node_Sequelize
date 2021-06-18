@@ -14,6 +14,7 @@
             <div class="accordion-body">
               To get a login you need access <strong>/login</strong> to generate a valide <strong>token</strong><br>
               in your <strong>insominia</strong>/<strong>postman</strong> use this json <br>
+              <b>Router</b> - <code>/login</code> <br>
               <code>
                 { <br>
                 "email": "email registered",<br>
@@ -27,19 +28,21 @@
           <h2 class="accordion-header" id="headingTwo">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-              Accordion Item #2
+              <strong>User</strong> - Address
             </button>
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse
-              plugin
-              adds the appropriate classes that we use to style each element. These classes control the overall
-              appearance,
-              as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just about any HTML can go within the
-              <code>.accordion-body</code>, though the transition does limit overflow.
+              To add an Address in one user, use this exemple of JSON<br>
+              <b>Router</b> - <code>/users/:user_id/addresses</code> <br>
+              <code>
+                {<br>
+                  "zipcode": "23425-444",<br>
+                  "street": "Av Paulista",<br>
+                  "number": 1000<br>
+                }
+              </code>
             </div>
           </div>
         </div>
@@ -47,19 +50,39 @@
           <h2 class="accordion-header" id="headingThree">
             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
               data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-              Accordion Item #3
+              <strong>User</strong> - Insurance
             </button>
           </h2>
           <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
             data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse
-              plugin
-              adds the appropriate classes that we use to style each element. These classes control the overall
-              appearance,
-              as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or
-              overriding our default variables. It's also worth noting that just about any HTML can go within the
-              <code>.accordion-body</code>, though the transition does limit overflow.
+              To add an Insurance in one user, use this exemple of JSON<br>
+              <b>Router</b> - <code>/users/:user_id/insurance</code> <br>
+              <code>
+                {<br>
+                  "name": "Unimed"<br>
+                }
+              </code>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <strong>User</strong> - Histories
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+            data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              To add a Histories in one user, use this exemple of JSON<br>
+              <b>Router</b> - <code>/users/:user_id/histories</code> <br>
+              <code>
+                {<br>
+                  "history": "a new history here"<br>
+                }
+              </code>
             </div>
           </div>
         </div>
