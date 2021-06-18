@@ -7,6 +7,7 @@ const standardRoute = require('./routes/standard');
 const bodyParser = require('body-parser');
 const flash = require('flash');
 const session = require('express-session');
+var cookieParser = require('cookie-parser');
 
 const PORT = process.env.PORT
 
@@ -19,6 +20,7 @@ app.use(session({
 }));
 app.use(flash())
 app.use(express.json());
+app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
 // app.use('/public', express.static(path.join(__dirname, 'public')));
 // app.use(express.static(__dirname + '/public'));
