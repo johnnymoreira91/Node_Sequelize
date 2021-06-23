@@ -9,7 +9,7 @@ const flash = require('flash');
 const session = require('express-session');
 var cookieParser = require('cookie-parser');
 
-const PORT = process.env.PORT
+const PORT = process.env.PORT || 3000
 
 const app = express();
 

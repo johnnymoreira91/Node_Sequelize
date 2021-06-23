@@ -11,6 +11,7 @@ const connection = new Sequelize(dbConfig);
 connection.authenticate().then(
     () => {
         console.log('Sequelize Connected using MySql')
+        console.log("MySql using PORT: ", 3306)
     }
 ).catch(
     (err) => {
